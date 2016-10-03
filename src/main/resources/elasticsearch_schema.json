@@ -1,0 +1,9 @@
+{
+  "_id" : "value of host",
+  "timestamp" : "DateTime",
+  "cpu": "Float",
+  "memory": "Float"
+}
+
+// Elasticsearc data refresh will be performed by overwriting existing entry.
+// Hence total number of records in present in Elasticsearch at any moment would be equal to number of hosts.

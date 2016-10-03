@@ -1,0 +1,49 @@
+//Single Machine Record Schema
+
+{
+  "Host": "String",
+  "First_TimeStamp": "DateTime",
+  "Most_Recent_TimeStamp": "DateTime",
+  "Total_Log_Entries_To_Date": "Integer",
+  "Total_Up_Time_In_Minutes": "Integer",
+  "Total_CPU_To_Date": "Float",
+  "Total_Memory_To_Date": "Float",
+  "Average_CPU": "Float",
+  "Average_Memory": "Float",
+  "Current_CPU": "Float",
+  "Current_Memory": "Float",
+  "Six_Hourly_Record": {
+    "First": {
+      "CPU": "Float",
+      "Memory": "Float"
+    },
+    "Second": {
+      "CPU": "Float",
+      "Memory": "Float"
+    },
+    "Third": {
+      "CPU": "Float",
+      "Memory": "Float"
+    },
+    "Fourth": {
+      "CPU": "Float",
+      "Memory": "Float"
+    }
+  },
+
+  "Daily_Records": {
+
+      "1" : {   // Here "1" is the number of that day in that year. 1 jan is 1 , 31 Dec is 365/366(Leap).
+        "DayCounter" : "Integer",        //This value is same as "1" value used before. This field is TBD.
+        "Date" : "Date",
+        "TotalCPU_ForDay" : "Float",
+        "TotalMemory_ForDay" : "Float"
+      },
+    "2" : {   // here "1" is the number of that day in that year. 1 jan is 1 , 31 Dec is 365/366(Leap).
+      "Date" : "Date",
+      "TotalCPU_ForDay" : "Float",
+      "TotalMemory_ForDay" : "Float"
+    }
+    //Like this there will be one record for each day. This record is nothing but accumulation of four six hourly records for that day.
+  }
+}
